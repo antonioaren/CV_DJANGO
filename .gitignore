@@ -1,0 +1,6 @@
+../.python-version
+.DS_Store
+.idea
+.vscode
+*.pyc
+.dockerignore
