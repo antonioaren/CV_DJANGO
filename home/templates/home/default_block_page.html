@@ -3,19 +3,11 @@
 
 {% block content %}
 
-<div {% if is_reference %}class="api-reference-bloc"{% endif %}>
     <div>
-        {% if not is_reference %} {% breadcrumb %} {% endif %}
-        {% set h2_title_number = 0 %}
         {% for block in page.content %}
-            {% if block.block_type == 'title' and block.value.level == "h2" %}
-                {% include_block block with h2_id=h2_title_number %}
-                {% increment h2_title_number as h2_title_number %}
-            {% else %}
-                {% include_block block %}
-            {% endif %}
+            {% include_block block %}
         {% endfor %}
+
     </div>
-</div>
 
 {% endblock %}
