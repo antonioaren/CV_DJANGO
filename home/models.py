@@ -8,6 +8,9 @@ from home.blocks import HomeBlocks
 
 
 class HomePage(Page):
+
+    parent_page_types = ["wagtailcore.Page"]
+
     content = StreamField(
         HomeBlocks(),
         null=True,

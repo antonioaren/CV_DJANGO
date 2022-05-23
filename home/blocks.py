@@ -1,16 +1,13 @@
-from wagtail.blocks import StructBlock, CharBlock, TextBlock, StreamBlock
+from wagtail.blocks import StructBlock, CharBlock, TextBlock, StreamBlock, RichTextBlock
 
 
 class ParagraphBlock(StructBlock):
-    title = CharBlock(max_length=255)
-    description = TextBlock()
+    description = RichTextBlock("")
 
 
 class Paragraph(StructBlock):
     content = StreamBlock(
-        [("media", ParagraphBlock())],
-        min_num=2,
-        max_num=2,
+        [("paragraph", ParagraphBlock())],
         label="Paragraph",
     )
 
