@@ -1,8 +1,8 @@
 {% load wagtailcore_tags %}
 <div>
     {% for paragraph in value.content %}
-        <div>
-            <p class="cv-paragraph">{{ paragraph.value.description | richtext}}</p>
+        <div class="cv-paragraph">
+            {{ paragraph.value.description | richtext}}
         </div>
     {% endfor %}
 </div>

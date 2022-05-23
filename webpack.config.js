@@ -1,7 +1,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const {VueLoaderPlugin} = require("vue-loader");
-const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+const { VueLoaderPlugin } = require("vue-loader");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -36,7 +36,7 @@ module.exports = {
                 test: /\.m?js$/i,
                 exclude: /(node_modules|bower_components)/,
                 use: {
-                    loader: "vue-loader",
+                    loader: "babel-loader",
                     options: {
                         presets: [
                             [
